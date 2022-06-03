@@ -1,18 +1,16 @@
-beaches = [""]                                                #beach list   
-beach_list = [""]                                             #beach list
-votes = [0, 0, 0]                                             #votes list
-
-def initialize_beach_list(beach_list):                        #Write a function, initialize_beach_list(beach_list)           
-	beach_list = ["Englishman's Bay"]                           #Add Englishman’s Bay to the list.             
-	beach_list.append("Castara Bay")                            #Add Castara Bay to the end of the list.         
-	beach_list.insert(0, "Pigeon Point Beach")                  #Add Pigeon Point Beach to the beginning of the list.                  
-	beach_list[1]("Nylon Pool")                                 #Change the name of the beach at index 1 to Nylon Pool.   
-	del beach_list[-1]                                          #Delete the beach at the end of the list using -1           
-	beach_list.append("Pirate's Bay")                           #Add Pirate’s Bay to the end of the list.                          
-	beach_list.append("Store Bay")                              #Add Store Bay to the end of the list      
-	this_beach = []                                                                    
-	this_beach = beach_list.pop(-2)                             #Remove the beach at index -2 and store it in a variable, this_beach.                         
-	beach_list.remove("Pigeon Point Beach")                     #Remove the beach named Pigeon Point Beach from the list.               
-	beach_list.append("Maracas Bay")                            #Add Maracas Beach to the end of the list.        
+beaches = []                                                #beach list   
+votes = [0, 0, 0]                                           #votes list
+beach_list = []                                             #beach list
+# ***                                                       #Write a function, initialize_beach_list(beach_list)           
+beach_lis.append("Englishman's Bay")                        #Add Englishman’s Bay to the list.             
+beach_list.append("Castara Bay")                            #Add Castara Bay to the end of the list.         
+beach_list.insert(0, "Pigeon Point Beach")                  #Add Pigeon Point Beach to the beginning of the list.                  
+beach_list[1] = "Nylon Pool                                 #Change the name of the beach at index 1 to Nylon Pool.   
+del beach_list[-1]                                          #Delete the beach at the end of the list using -1           
+beach_list.append("Pirate's Bay")                           #Add Pirate’s Bay to the end of the list.                          
+beach_list.append("Store Bay")                              #Add Store Bay to the end of the list                                                                    
+this_beach = beach_list.pop(-2)                             #Remove the beach at index -2 and store it in a variable, this_beach.                         
+beach_list.remove("Pigeon Point Beach")                     #Remove the beach named Pigeon Point Beach from the list.               
+beach_list.append("Maracas Bay")                            #Add Maracas Beach to the end of the list.        
 print(beach_list)                                                   
-print("Beach list successfully completed.")                   #Print the statement: “Beach list successfully created.”                  
+print("Beach list successfully completed.")                 #Print the statement: “Beach list successfully created.”                  
