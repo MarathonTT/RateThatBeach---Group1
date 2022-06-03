@@ -3,7 +3,8 @@ beaches = []                                                #beach list
 votes = [0, 0, 0]                                           #votes list
 beach_list = []                                             #beach list
 
-#question 2 ***                                                       #Write a function, initialize_beach_list(beach_list)           
+#question 2 
+#function goes here                                         #Write a function, initialize_beach_list(beach_list)           
 beach_lis.append("Englishman's Bay")                        #Add Englishman’s Bay to the list.             
 beach_list.append("Castara Bay")                            #Add Castara Bay to the end of the list.         
 beach_list.insert(0, "Pigeon Point Beach")                  #Add Pigeon Point Beach to the beginning of the list.                  
