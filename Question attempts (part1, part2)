@@ -1,7 +1,9 @@
+#question 1
 beaches = []                                                #beach list   
 votes = [0, 0, 0]                                           #votes list
 beach_list = []                                             #beach list
-# ***                                                       #Write a function, initialize_beach_list(beach_list)           
+
+#question 2 ***                                                       #Write a function, initialize_beach_list(beach_list)           
 beach_lis.append("Englishman's Bay")                        #Add Englishman’s Bay to the list.             
 beach_list.append("Castara Bay")                            #Add Castara Bay to the end of the list.         
 beach_list.insert(0, "Pigeon Point Beach")                  #Add Pigeon Point Beach to the beginning of the list.                  
@@ -14,3 +16,23 @@ beach_list.remove("Pigeon Point Beach")                     #Remove the beach na
 beach_list.append("Maracas Bay")                            #Add Maracas Beach to the end of the list.        
 print(beach_list)                                                   
 print("Beach list successfully completed.")                 #Print the statement: “Beach list successfully created.”                  
+print("\t")
+
+#question 3
+def show_main_menu():
+	option = ""
+	while option != "c":
+		print("Welcome to RateThatBeach.TT")
+		print("\n\ta. Vote for Beach")
+		print("\tb. View Results")
+		print("\tc. Quit\n")
+		option = input("Select choice [a-c]:")
+		if option == "a":
+			vote(beaches, votes)
+		elif option == "b":
+			show_results(beaches, votes)
+		elif option == "c":
+			break
+		else: 
+			print("\nSorry, please select option a, b or c.")
+show_main_menu()
