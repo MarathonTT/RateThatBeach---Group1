@@ -1,39 +1,71 @@
-#question 1
-beaches = []                                                #beach list   
-votes = [0, 0, 0]                                           #votes list
-beach_list = []                                             #beach list
+#part1
+beaches = []                                                                                          #beach list
+votes = [0, 0, 0]                                             
 
-#question 2 
-#function goes here                                         #Write a function, initialize_beach_list(beach_list)           
-beach_lis.append("Englishman's Bay")                        #Add Englishman’s Bay to the list.             
-beach_list.append("Castara Bay")                            #Add Castara Bay to the end of the list.         
-beach_list.insert(0, "Pigeon Point Beach")                  #Add Pigeon Point Beach to the beginning of the list.                  
-beach_list[1] = "Nylon Pool                                 #Change the name of the beach at index 1 to Nylon Pool.   
-del beach_list[-1]                                          #Delete the beach at the end of the list using -1           
-beach_list.append("Pirate's Bay")                           #Add Pirate’s Bay to the end of the list.                          
-beach_list.append("Store Bay")                              #Add Store Bay to the end of the list                                                                    
-this_beach = beach_list.pop(-2)                             #Remove the beach at index -2 and store it in a variable, this_beach.                         
-beach_list.remove("Pigeon Point Beach")                     #Remove the beach named Pigeon Point Beach from the list.               
-beach_list.append("Maracas Bay")                            #Add Maracas Beach to the end of the list.        
-print(beach_list)                                                   
-print("Beach list successfully completed.")                 #Print the statement: “Beach list successfully created.”                  
+#part2
+def initialize_beach_list(beach_list):          #beach_list is initialized
+	beach_list = []
+
+beach_list = ["Englishman's Bay"]            #beach list is created with it's first beach
+beach_list.append("Castara Bay")                #Castara Bay is added to the end of the beach list             
+beach_list.insert(0, "Pigeon Point Beach")            #Pigeon Point Beach is added at the start of the beach list                 
+beach_list[1] = "Nylon Pool"                #Nylon Pool is added second on the list              
+del beach_list[-1]                      #the last beach is deleted from the list                           
+beach_list.append("Pirate's Bay")             #Pirate's Bay is added to the start of the list 
+beach_list.append("Store Bay")              #Store Bay is added to the start of the list                
+this_beach = beach_list.pop(-2)                #the third beach on list is removed and added in a new variable                                  
+beach_list.remove("Pigeon Point Beach")                #Pigeon Point Beach is removed from the list               
+beach_list.append("Maracas Beach")                 #Maracas Beach is added at the start of the list                               
+print("Beach list successfully completed.")             
+
 print("\t")
 
-#question 3
-def show_main_menu():
+#part3
+def show_main_menu():                            #main menu function is defined
 	option = ""
-	while option != "c":
-		print("Welcome to RateThatBeach.TT")
-		print("\n\ta. Vote for Beach")
-		print("\tb. View Results")
-		print("\tc. Quit\n")
-		option = input("Select choice [a-c]:")
-		if option == "a":
-			vote(beaches, votes)
-		elif option == "b":
-			show_results(beaches, votes)
-		elif option == "c":
-			break
-		else: 
-			print("\nSorry, please select option a, b or c.")
-show_main_menu()
+
+	print("Welcome to RateThatBeach.TT")               #prints welcome message
+	print("\n\ta. Vote for Beach")                    #next-line, indents and prints voting option
+	print("\tb. View Results")                       #indents and prints results option
+	print("\tc. Quit\n")                            #indents and prints quit option
+	option = input("Select choice [a-c]:")                          #prints choices with option for user input
+
+#part4
+	if option == "a":                               
+		vote(beach_list, voting_list)                     #voting function is set to option a 
+	elif option == "b":
+		show_results(beach_list, voting_list)                   #results function is set to option b
+	elif option == "c":                                #quit function is set to option c
+		break                                      #syntax error= "break" outside loop
+	else: 
+		print("\nSorry, please select option a, b or c.")             #error message is printed
+
+show_main_menu()                      #calls main menu function
+
+
+
+def vote(beach_list, voting_list):               #defines vote function
+
+	beach_list = [""]
+	voting_list = [0, 0, 0]
+
+for i in beach_list:                                      #for loop used to print beach of beach list items
+	print(i)
+user_vote = input("Choose your favourite beach from the list: ")
+count = 0                                                                 #count initialized to 0
+while (count > len(beach_list)) and (user_vote != len(beach_list)):            #conditions are set to set index of beaches
+	count = count +1                                               #count is incremented by 1      
+if count == len(beach_list):                                           #condition set to take action if count is length of beach list     
+	print("Sorry, {user_vote} is not currently an option.")                             #
+else:
+    print("Vote recorded.")                            #displays vote confirmation
+    voting_list[count] = count + 1                          #voting count is incremented by 1
+
+
+def show_results(beach_list, voting_list):                        #function called to display results
+	for (beaches, votes) in (beach_list, voting_list):                       #for loop iterates through both variables at once                        
+		upper(beach_list)                              #contents of beach list are converted to uppercase
+		print(beaches, ": ", votes)                              #list is print                   
+
+initialize_beach_list(beaches)                        #beach list initialized
+show_main_menu()                          #main menu function is called
