@@ -1,8 +1,8 @@
-#part1
+#1
 beaches = []                                                                                          #beach list
 votes = [0, 0, 0]                                             
 
-#part2
+#2
 def initialize_beach_list(beach_list):          #beach_list is initialized
 	beach_list = []
 
@@ -20,7 +20,7 @@ print("Beach list successfully completed.")
 
 print("\t")
 
-#part3
+#3
 def show_main_menu():                            #main menu function is defined
 	option = ""
 
@@ -30,7 +30,7 @@ def show_main_menu():                            #main menu function is defined
 	print("\tc. Quit\n")                            #indents and prints quit option
 	option = input("Select choice [a-c]:")                          #prints choices with option for user input
 
-#part4
+#4
 	if option == "a":                               
 		vote(beach_list, voting_list)                     #voting function is set to option a 
 	elif option == "b":
@@ -44,6 +44,7 @@ show_main_menu()                      #calls main menu function
 
 
 
+#5
 def vote(beach_list, voting_list):               #defines vote function
 
 	beach_list = [""]
@@ -62,10 +63,12 @@ else:
     voting_list[count] = count + 1                          #voting count is incremented by 1
 
 
+#6
 def show_results(beach_list, voting_list):                        #function called to display results
 	for (beaches, votes) in (beach_list, voting_list):                       #for loop iterates through both variables at once                        
 		upper(beach_list)                              #contents of beach list are converted to uppercase
 		print(beaches, ": ", votes)                              #list is print                   
 
+#7
 initialize_beach_list(beaches)                        #beach list initialized
 show_main_menu()                          #main menu function is called
